@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="logo">
+                <a href="#">LIBRARY.</a>
+            </div>
+            <div id="menu">
+                <li class="menuItem"><a href="#">Home</a></li>
+                <li class="menuItem"><a onclick="dialogBox();" href="#" id="btn1">My Books</a></li>
+                <li class="menuItem"><a href="#contact">Contact</a></li>
+                <li class="menuItem"><a href="#" onclick="toggle();">Change User</a></li>
+            </div>
+        </nav>
+    </header>
+
+    <section id="intro">
+        <div id="description">
+            <h1 class="descripItem">Welcome to Public Library</h1>
+            <p class="descripItem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad non velit numquam alias
+                officiis architecto.</p>
+            <a href="#" class="descripItem" onclick="dialogBox();">My Books</a>
+        </div>
+        <div id="image">
+            <img src="/images/bg.jpg" alt="">
+        </div>
+    </section>
+
+    <div class="dialogBox active" id="dialogBox">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg"
+            onclick="toggle();" viewBox="0 0 16 16">
+            <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg>
+        <h2>Enter your User Name</h2>
+        <form action="none" class="form">
+            <input type="text" name="userName" id="userName" placeholder="User name goes here...">
+            <!-- <input type="submit" value="submit" id="submit"> -->
+            <a href="#" id="submit">Submit</a>
+        </form>
+    </div>
+    <hr>
+    <section id="issueBooks">
+        <h1>Issue books</h1>
+        <form action="none">
+            <div class="formElement">
+                <label for="bookName">Book Name</label>
+                <input type="text" name="bookName" id="bookName" placeholder="Enter book name">
+            </div>
+            <div class="formElement">
+                <label for="author">Author Name</label>
+                <input type="text" name="author" id="authorName" placeholder="Enter author name">
+            </div>
+            <div class="formElement">
+                <label for="genre">Genre</label>
+                <select name="genre" id="genre">
+                    <option value="select">--select--</option>
+                    <option value="literature">Literature</option>
+                    <option value="technology">Technology</option>
+                    <option value="selfHelp">Self Help</option>
+                    <option value="finance">Finance</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="history">History</option>
+                    <option value="novel">Novel</option>
+                </select>
+            </div>
+            <div class="formElement">
+                <a href="#" id="submit2">Submit</a>
+            </div>
+        </form>
+    </section>
+
+    <section id="myBooks">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>-</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>1</td>
+                    <td>Java Programming</td>
+                    <td>Harry</td>
+                    <td>Technology</td>
+                </tr> -->
+            </tbody>
+        </table>
+        <div id="msg">
+            <!-- <p>You have no issued books yet...</p> -->
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="contact">
+        <h1 id="heading">Contact Us</h1>
+        <div class="contactElement" id="image">
+            <img src="images/Contact.jpg" alt="">
+        </div>
+        <div class="contactElement" id="form">
+            <form action="none">
+                <input type="text" name="name" id="name" placeholder="Your name">
+                <input type="email" name="email" id="email" placeholder="Your E-mail">
+                <textarea name="message" id="message" cols="24" rows="4" placeholder="Your message"></textarea>
+                <a href="#">Submit</a>
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div>
+            <i class="bi bi-facebook footerEle social"></i>
+            <i class="bi bi-instagram footerEle social"></i>
+            <i class="bi bi-linkedin footerEle social"></i>
+            <i class="bi bi-discord footerEle social"></i>
+        </div>
+        <p class="footerEle">library.com | All rights reserved &copy; 2022</p>
+    </footer>
+
+</body>
+
+<script src="javascript/index.js"></script>
+
+</html>
