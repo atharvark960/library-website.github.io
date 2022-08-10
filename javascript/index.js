@@ -4,10 +4,6 @@ window.addEventListener(`load`, function () {
     let element = document.getElementById(`dialogBox`);
     element.classList.toggle(`active`);
 })
-
-// window.onload(function(){
-// localStorage.setItem(`userName`, "");
-// })
 showBooks();
 
 function toggle() {
@@ -67,7 +63,6 @@ submit.addEventListener(`click`, function (e) {
         users.push(userObj);
         localStorage.setItem(`userNames`, JSON.stringify(users));
     }
-    // console.log(users);
     dialogBox();
     toggle();
     showBooks();
@@ -79,13 +74,7 @@ submit2.addEventListener(`click`, function (e) {
     let bookName = document.getElementById(`bookName`);
     let authorName = document.getElementById(`authorName`);
     let genre = document.getElementById(`genre`);
-    // console.log(bookName.value + authorName.value + genre.value);
-    // let input = document.getElementById(`userName`);
-    // let userName = input.value;
     let userName = localStorage.getItem(`userName`);
-    // console.log(userName);
-    // input.value = "";
-    // console.log(bookObj);
     let userNames = localStorage.getItem(`userNames`);
     if (userNames == null) {
         users = [];
@@ -106,7 +95,6 @@ submit2.addEventListener(`click`, function (e) {
         });
         localStorage.setItem(`userNames`, JSON.stringify(users));
     }
-    // console.log(users);
     bookName.value = "";
     authorName.value = "";
     genre.value = "";
@@ -133,8 +121,6 @@ function showBooks() {
     else {
         users = JSON.parse(userNames);
     }
-    // let input = document.getElementById(`userName`);
-    // let userName = input.value;
     let userName = localStorage.getItem(`userName`);
     let html = "";
     let tBody = document.querySelector(`tbody`);
@@ -156,7 +142,6 @@ function showBooks() {
                     <td>${element.genre}</td>
                     <td class="returnBtn"><button>Return</button></td>
                     </tr>`;
-                    // console.log(button);
                 })
                 tBody.innerHTML = html;
             }
@@ -168,35 +153,4 @@ function returnBook() {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-// function book(givenbookName, givenauthorName, givengivenGenre) {
-//     this.bookName = givenbookName;
-//     this.authorName = givenauthorName;
-//     this.genre = givengivenGenre;
-// }
-
-// let user = {
-//     book : {
-//         bookName: bookName,
-//         authorName: authorName,
-//         genre: givenGenre
-//     }
-// }
-
-// let book = {
-//     bookName: bookName,
-//     authorName: authorName,
-//     genre: givenGenre
-// }
 
